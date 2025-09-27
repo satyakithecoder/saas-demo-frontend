@@ -1,0 +1,38 @@
+<svg viewBox="0 0 240 260" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+            .invoice-text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+        </style>
+    </defs>
+
+    <!-- Background -->
+    <rect width="240" height="260" fill="#fafafa" rx="10"/>
+
+    <!-- Header -->
+    <text x="16" y="24" class="invoice-text" font-size="14" font-weight="700" fill="#1f2937">Invoices</text>
+
+    <!-- Invoice 1 -->
+    <rect x="12" y="40" width="216" height="62" fill="#ffffff" rx="6" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="22" y="56" class="invoice-text" font-size="10" fill="#6b7280" font-weight="500">ID: INV-2847</text>
+    <text x="22" y="72" class="invoice-text" font-size="12" fill="#111827" font-weight="600">Sarah Mitchell</text>
+    <rect x="22" y="79" width="60" height="16" fill="#10b981" rx="3"/>
+    <text x="52" y="89" class="invoice-text" font-size="9" fill="#ffffff" font-weight="600" text-anchor="middle">Received</text>
+    <text x="206" y="72" class="invoice-text" font-size="14" fill="#111827" font-weight="700" text-anchor="end">$745.00</text>
+
+    <!-- Invoice 2 -->
+    <rect x="12" y="110" width="216" height="62" fill="#ffffff" rx="6" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="22" y="126" class="invoice-text" font-size="10" fill="#6b7280" font-weight="500">ID: INV-2846</text>
+    <text x="22" y="142" class="invoice-text" font-size="12" fill="#111827" font-weight="600">Marcus Johnson</text>
+    <rect x="22" y="149" width="60" height="16" fill="#10b981" rx="3"/>
+    <text x="52" y="159" class="invoice-text" font-size="9" fill="#ffffff" font-weight="600" text-anchor="middle">Received</text>
+    <text x="206" y="142" class="invoice-text" font-size="14" fill="#111827" font-weight="700" text-anchor="end">$895.00</text>
+
+    <!-- Invoice 3 -->
+    <rect x="12" y="180" width="216" height="62" fill="#ffffff" rx="6" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="22" y="196" class="invoice-text" font-size="10" fill="#6b7280" font-weight="500">ID: INV-2845</text>
+    <text x="22" y="212" class="invoice-text" font-size="12" fill="#111827" font-weight="600">Emily Rodriguez</text>
+    <rect x="22" y="219" width="40" height="16" fill="#ef4444" rx="3"/>
+    <text x="42" y="229" class="invoice-text" font-size="9" fill="#ffffff" font-weight="600" text-anchor="middle">Paid</text>
+    <text x="206" y="212" class="invoice-text" font-size="14" fill="#111827" font-weight="700" text-anchor="end">$625.75</text>
+</svg>
