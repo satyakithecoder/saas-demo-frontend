@@ -83,7 +83,7 @@ onUnmounted(() => {
           class="w-full h-auto shadow-2xl rounded-lg bg-slate-950 opacity-80 object-cover"
       >
     </div>
-    <div class="absolute bottom-8 left-8 z-20 w-40 md:w-[300px] hidden lg:block md:rotate-12">
+    <div class="absolute bottom-10 left-8 z-20 w-40 md:w-[300px] hidden lg:block md:rotate-12">
       <img :src="Invoice" alt="Invoice" class="w-full h-auto shadow-2xl rounded-lg object-cover border-2">
     </div>
 
