@@ -26,7 +26,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <nav class="h-16 w-full flex items-center justify-between px-4 bg-white shadow-md mb-2">
+  <nav class="h-16 w-full flex items-center justify-between px-4 bg-white shadow-md">
 
     <div class="flex items-center space-x-2">
       <img :src="Logo" alt="logo" class="h-8 w-8">
@@ -52,38 +52,56 @@ onUnmounted(() => {
       </a>
     </div>
 
-    <div class="flex items-center space-x-4 hidden md:flex">
-      <button class="px-4 py-1 border border-blue-500 text-blue-500 rounded hover:bg-blue-50 transition">Sign In</button>
-      <button class="px-4 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 transition">Sign Up</button>
+    <!-- Desktop buttons -->
+    <div class="items-center space-x-4 hidden md:flex">
+      <router-link to="/signin">
+        <button class="px-4 py-1 border border-blue-500 text-blue-500 rounded hover:bg-blue-50 transition">Sign In</button>
+      </router-link>
+      <router-link to="/signup">
+        <button class="px-4 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 transition">Sign Up</button>
+      </router-link>
     </div>
-    <div class="md:hidden flex items-center">
-      <button @click="menu" class="text-2xl">
+
+    <!-- Mobile/tablet buttons and menu toggle -->
+    <div class="md:hidden flex items-center space-x-2">
+      <router-link to="/signin">
+        <button class="px-3 py-1 border border-blue-500 text-blue-500 rounded hover:bg-blue-50 transition text-sm">Sign In</button>
+      </router-link>
+      <button @click="menu" class="text-2xl ml-2">
         ☰
       </button>
     </div>
+
     <div class="md:hidden fixed top-16 left-0 w-full bg-white shadow-md z-50 flex flex-col space-y-2 p-4 hidden" id="mobile-menu">
       <a class="w-full text-left px-4 py-2 rounded hover:bg-blue-100" href="#hero">Home</a>
       <a class="w-full text-left px-4 py-2 rounded hover:bg-blue-100">Features</a>
       <a class="w-full text-left px-4 py-2 rounded hover:bg-blue-100" href="#pricing">Pricing</a>
       <a class="w-full text-left px-4 py-2 rounded hover:bg-blue-100" href="#aboutUs">About Us</a>
+      <div class="border-t pt-2 mt-2">
+        <router-link to="/signup">
+          <button class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition">Sign Up</button>
+        </router-link>
+      </div>
     </div>
   </nav>
-  <div class="h-[90vh] w-full mx-2 rounded-3xl relative bg-gray-50" id="hero">
+  <div class="h-[90vh] w-full mx-2 relative bg-blue-50" id="hero">
     <div class="absolute inset-0 z-10 flex flex-col items-center justify-center text-white space-y-3 px-4 text-center">
       <h1 class="text-3xl md:text-4xl font-bold text-slate-950">Organize, Plan and Track</h1>
       <p class="text-base md:text-lg mt-2 text-black">All in one place</p>
-      <button class="bg-blue-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-600 transition duration-300">
-        Get started
-      </button>
+      <router-link to="/signup">
+        <button class="bg-blue-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-600 transition duration-300">
+          Get started
+        </button>
+      </router-link>
     </div>
-    <div class="absolute top-4 right-2 md:top-24 md:right-8 z-20 md:transform md:-rotate-12 w-40 md:w-96 hidden lg:block">
+    <div class="absolute top-4 right-2 md:top-24 md:right-8 z-20 md:transform md:-rotate-12 w-40 md:w-96 hidden lg:block hover:rotate-0 transition-transform duration-300">
       <img
           :src="Chat"
           alt="chat"
           class="w-full h-auto shadow-2xl rounded-lg bg-slate-950 opacity-80 object-cover"
       >
     </div>
-    <div class="absolute bottom-10 left-8 z-20 w-40 md:w-[300px] hidden lg:block md:rotate-12">
+    <div class="absolute bottom-10 left-8 z-20 w-40 md:w-[300px] hidden lg:block md:rotate-12 hover:rotate-0 transition-transform duration-300">
       <img :src="Invoice" alt="Invoice" class="w-full h-auto shadow-2xl rounded-lg object-cover border-2">
     </div>
 
